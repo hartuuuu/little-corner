@@ -10,10 +10,11 @@
     --card:#FFFFFF;
 
     --text:#2F2F2F;
-    --sub:#767676;
+    --sub:#7A7A7A;
 
     --green:#6D9473;
-    --shadow:0 20px 45px rgba(0,0,0,.08);
+
+    --shadow:0 18px 45px rgba(0,0,0,.08);
 
 }
 
@@ -32,12 +33,11 @@ body{
     align-items:center;
 
     overflow:hidden;
-
     position:relative;
 
 }
 
-/* Background */
+/* Background blobs */
 
 .background-blur{
 
@@ -45,23 +45,25 @@ body{
 
     border-radius:50%;
 
-    filter:blur(90px);
+    filter:blur(110px);
 
     opacity:.45;
 
     z-index:-1;
 
+    animation:float 10s ease-in-out infinite;
+
 }
 
 .blur1{
 
-    width:300px;
-    height:300px;
+    width:320px;
+    height:320px;
 
-    background:#d9ead7;
+    background:#DCEFD9;
 
-    top:-80px;
-    left:-70px;
+    top:-100px;
+    left:-90px;
 
 }
 
@@ -70,10 +72,12 @@ body{
     width:260px;
     height:260px;
 
-    background:#efe6cf;
+    background:#F3E7C8;
 
-    right:-80px;
-    bottom:-80px;
+    right:-70px;
+    bottom:-70px;
+
+    animation-delay:5s;
 
 }
 
@@ -83,7 +87,7 @@ body{
 
     width:100%;
 
-    padding:30px;
+    padding:25px;
 
     display:flex;
     justify-content:center;
@@ -95,13 +99,17 @@ body{
     width:100%;
     max-width:560px;
 
-    background:var(--card);
+    background:rgba(255,255,255,.92);
 
-    border-radius:28px;
+    backdrop-filter:blur(10px);
+
+    border-radius:30px;
 
     padding:45px;
 
     box-shadow:var(--shadow);
+
+    border:1px solid rgba(255,255,255,.7);
 
     animation:appear .6s ease;
 
@@ -117,7 +125,7 @@ body{
 
     font-size:34px;
 
-    margin-bottom:12px;
+    margin-bottom:14px;
 
     transition:.25s;
 
@@ -131,7 +139,9 @@ h1{
 
     font-weight:400;
 
-    margin-bottom:14px;
+    margin-bottom:12px;
+
+    letter-spacing:.3px;
 
 }
 
@@ -142,6 +152,8 @@ h1{
     line-height:1.8;
 
     margin-bottom:40px;
+
+    font-size:.95rem;
 
 }
 
@@ -157,10 +169,6 @@ h1{
 
     display:inline-block;
 
-    background:#EAF4EC;
-
-    color:#5F8C65;
-
     padding:8px 18px;
 
     border-radius:999px;
@@ -169,7 +177,9 @@ h1{
 
     font-weight:600;
 
-    margin-bottom:24px;
+    margin-bottom:20px;
+
+    transition:.3s;
 
 }
 
@@ -181,11 +191,11 @@ h1{
 
     font-size:30px;
 
-    line-height:1.6;
+    line-height:1.65;
 
     font-weight:400;
 
-    min-height:220px;
+    min-height:210px;
 
 }
 
@@ -199,7 +209,7 @@ button{
 
     cursor:pointer;
 
-    padding:18px;
+    padding:17px;
 
     border-radius:999px;
 
@@ -207,7 +217,7 @@ button{
 
     color:white;
 
-    font-size:16px;
+    font-size:15px;
 
     font-weight:600;
 
@@ -217,9 +227,9 @@ button{
 
 button:hover{
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 
-    filter:brightness(1.05);
+    box-shadow:0 12px 25px rgba(109,148,115,.25);
 
 }
 
@@ -243,7 +253,7 @@ button:active{
 
 }
 
-/* Animation */
+/* Animations */
 
 .fade{
 
@@ -274,7 +284,7 @@ button:active{
     from{
 
         opacity:0;
-        transform:translateY(30px);
+        transform:translateY(25px);
 
     }
 
@@ -282,6 +292,22 @@ button:active{
 
         opacity:1;
         transform:translateY(0);
+
+    }
+
+}
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
 
     }
 

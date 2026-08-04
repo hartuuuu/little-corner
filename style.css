@@ -1,99 +1,314 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    background: #f6f3ee;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-    color: #2f2f2f;
+:root{
+
+    --paper:#F7F4EE;
+    --card:#FFFFFF;
+
+    --text:#2F2F2F;
+    --sub:#767676;
+
+    --green:#6D9473;
+    --shadow:0 20px 45px rgba(0,0,0,.08);
+
 }
 
-.card {
-    width: 100%;
-    max-width: 500px;
-    background: white;
-    border-radius: 24px;
-    padding: 40px 30px;
-    text-align: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:var(--paper);
+
+    color:var(--text);
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    position:relative;
+
 }
 
-.emoji {
-    font-size: 32px;
-    margin-bottom: 10px;
+/* Background */
+
+.background-blur{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    opacity:.45;
+
+    z-index:-1;
+
 }
 
-h1 {
-    font-size: 34px;
-    margin-bottom: 10px;
+.blur1{
+
+    width:300px;
+    height:300px;
+
+    background:#d9ead7;
+
+    top:-80px;
+    left:-70px;
+
 }
 
-.subtitle {
-    color: #777;
-    line-height: 1.7;
-    margin-bottom: 35px;
+.blur2{
+
+    width:260px;
+    height:260px;
+
+    background:#efe6cf;
+
+    right:-80px;
+    bottom:-80px;
+
 }
 
-.category {
-    display: inline-block;
-    background: #edf7ee;
-    color: #5f8f64;
-    padding: 8px 18px;
-    border-radius: 999px;
-    font-weight: bold;
-    margin-bottom: 20px;
+/* Layout */
+
+.container{
+
+    width:100%;
+
+    padding:30px;
+
+    display:flex;
+    justify-content:center;
+
 }
 
-.message {
-    font-size: 22px;
-    font-weight: normal;
-    line-height: 1.7;
-    min-height: 180px;
+.card{
+
+    width:100%;
+    max-width:560px;
+
+    background:var(--card);
+
+    border-radius:28px;
+
+    padding:45px;
+
+    box-shadow:var(--shadow);
+
+    animation:appear .6s ease;
+
 }
 
-button {
-    margin-top: 20px;
-    width: 100%;
-    padding: 16px;
-    border: none;
-    border-radius: 999px;
-    background: #6b9d72;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: .25s;
+.top{
+
+    text-align:center;
+
 }
 
-button:hover {
-    background: #5b8b62;
-    transform: translateY(-2px);
+.emoji{
+
+    font-size:34px;
+
+    margin-bottom:12px;
+
+    transition:.25s;
+
 }
 
-button:active {
-    transform: scale(.98);
+h1{
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:42px;
+
+    font-weight:400;
+
+    margin-bottom:14px;
+
 }
+
+.subtitle{
+
+    color:var(--sub);
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+/* Content */
+
+.content{
+
+    transition:.35s;
+
+}
+
+.category{
+
+    display:inline-block;
+
+    background:#EAF4EC;
+
+    color:#5F8C65;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    margin-bottom:24px;
+
+}
+
+.message{
+
+    margin-top:18px;
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:30px;
+
+    line-height:1.6;
+
+    font-weight:400;
+
+    min-height:220px;
+
+}
+
+/* Button */
+
+button{
+
+    width:100%;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:18px;
+
+    border-radius:999px;
+
+    background:var(--green);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+    filter:brightness(1.05);
+
+}
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+/* Footer */
+
+.footer{
+
+    margin-top:28px;
+
+    text-align:center;
+
+    color:#999;
+
+    font-size:.9rem;
+
+}
+
+/* Animation */
 
 .fade{
+
     animation:fade .35s ease;
+
 }
 
 @keyframes fade{
 
     from{
+
         opacity:0;
-        transform:translateY(10px);
+        transform:translateY(12px);
+
     }
 
     to{
+
         opacity:1;
         transform:translateY(0);
+
+    }
+
+}
+
+@keyframes appear{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    .card{
+
+        padding:30px;
+
+    }
+
+    h1{
+
+        font-size:34px;
+
+    }
+
+    .message{
+
+        font-size:24px;
+
+        min-height:180px;
+
     }
 
 }

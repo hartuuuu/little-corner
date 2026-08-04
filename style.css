@@ -1,103 +1,81 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f2eb;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    min-height:100vh;
-
-    padding:20px;
+body {
+    background: #f6f3ee;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #2f2f2f;
 }
 
-.card{
-    width:100%;
-    max-width:500px;
-
-    background:white;
-
-    border-radius:20px;
-
-    padding:40px;
-
-    text-align:center;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+.card {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 24px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
 }
 
-.emoji{
-    font-size:30px;
+.emoji {
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-h1{
-    margin-top:10px;
-    margin-bottom:10px;
+h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
 }
 
-.subtitle{
-    color:#777;
-    line-height:1.6;
+.subtitle {
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 35px;
 }
 
-#content{
-    margin:40px 0;
+.category {
+    display: inline-block;
+    background: #edf7ee;
+    color: #5f8f64;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.category{
-    display:inline-block;
-
-    background:#e8f4ea;
-
-    color:#4d7c57;
-
-    padding:8px 18px;
-
-    border-radius:999px;
-
-    font-weight:bold;
+.message {
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.7;
+    min-height: 180px;
 }
 
-.message{
-    margin-top:25px;
-
-    font-size:22px;
-
-    line-height:1.8;
-
-    font-weight:400;
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 999px;
+    background: #6b9d72;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .25s;
 }
 
-button{
-
-    border:none;
-
-    background:#6d9f71;
-
-    color:white;
-
-    padding:15px 35px;
-
-    border-radius:999px;
-
-    cursor:pointer;
-
-    font-size:16px;
-
-    transition:.2s;
-
+button:hover {
+    background: #5b8b62;
+    transform: translateY(-2px);
 }
 
-button:hover{
-
-    transform:translateY(-2px);
-
-    background:#5d8d61;
-
+button:active {
+    transform: scale(.98);
 }

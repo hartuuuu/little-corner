@@ -66,4 +66,9 @@ content.classList.add("fade");
 button.textContent =
 buttonTexts[Math.floor(Math.random() * buttonTexts.length)];
 
+emoji.textContent =
+faces[Math.floor(Math.random() * faces.length)];
+
 }
+
+button.addEventListener("click", showCard);

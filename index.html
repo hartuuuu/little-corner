@@ -7,58 +7,95 @@
 
     <title>little corner</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta name="description" content="A tiny place on the internet. Take whatever you need. Leave whenever you want.">
 
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
 
 <body>
 
-    <main>
+    <!-- Background decoration -->
+    <div class="background-blur blur1"></div>
+    <div class="background-blur blur2"></div>
 
-        <div class="card">
+    <main class="container">
 
-            <p class="emoji" id="emoji">:)</p>
+        <section class="card">
 
-            <h1>
-                little corner
-            </h1>
+            <!-- Top -->
 
-            <p class="subtitle">
-                Take whatever you need.
-                <br>
-                Leave whenever you want.
-            </p>
+            <div class="top">
 
+                <p id="emoji" class="emoji">:)</p>
 
-            <div id="content">
+                <h1 id="title">
+                    little corner
+                </h1>
 
-                <span class="category">
+                <p id="subtitle" class="subtitle">
+                    Take whatever you need.
+                    <br>
+                    Leave whenever you want.
+                </p>
+
+            </div>
+
+            <!-- Message -->
+
+            <div id="content" class="content">
+
+                <span id="category" class="category">
                     Welcome
                 </span>
 
+                <h2 id="message" class="message">
 
-                <h2 class="message">
-                    This is a tiny place on the internet.
+                    You found a little corner of the internet.
+
                     <br><br>
-                    Click explore and see what you find.
+
+                    It doesn't promise to change your life.
+
+                    <br><br>
+
+                    Maybe it'll change your next ten seconds.
+
                 </h2>
 
             </div>
 
+            <!-- Button -->
 
             <button id="randomBtn">
-                Explore
+
+                Open something
+
             </button>
 
+            <!-- Footer -->
 
-        </div>
+            <div class="footer">
+
+                <p id="footerText">
+
+                    made with curiosity.
+
+                </p>
+
+            </div>
+
+        </section>
 
     </main>
 
-
-<script src="content.js"></script>
-<script src="script.js"></script>
-
+    <script src="content.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

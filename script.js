@@ -1,3 +1,23 @@
+const emoji = document.getElementById("emoji");
+
+const faces = [
+
+":)",
+
+":D",
+
+":>",
+
+"^_^",
+
+"(•‿•)",
+
+"¯\\_(ツ)_/¯",
+
+"(｡•‿•｡)"
+
+];
+
 const category = document.querySelector(".category");
 const message = document.querySelector(".message");
 const button = document.getElementById("randomBtn");
